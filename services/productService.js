@@ -10,7 +10,7 @@ const getCategories = async () => {
 };
 
 const getAllProducts = async (data) => {
-  const limit = data?.limit ?? 10;
+  const limit = data?.limit ?? 50;
   const page = data?.page ?? 1;
   const offset = (page - 1) * limit;
   const sort = data?.sort ? JSON.parse(data.sort) : {};

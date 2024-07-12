@@ -26,6 +26,11 @@ app.use(
     credentials: true,
   })
 );
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 
 app.use("/api/products", productRoutes);
 app.use("/api/auth", authRoutes);

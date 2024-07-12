@@ -13,7 +13,7 @@ const getCategories = async (req, res) => {
 const getAllProducts = async (req, res) => {
   try {
     const products = await productService.getAllProducts(req.query);
-
+    console.log(products)
     res.json(products);
   } catch (error) {
     res.status(500).send(error.message);
